@@ -79,32 +79,7 @@ And add this to `css/styles.css`:
 
 ### 3. Add the intro video
 
-Recommended method: upload the video to YouTube as **Unlisted**.
-
-Then replace the `.video-placeholder` inside `.video-shell` with the YouTube embed:
-
-```html
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-  title="Meet Jules Paul"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen>
-</iframe>
-```
-
-Add:
-
-```css
-.video-shell iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: 0;
-  display: block;
-}
-```
+The intro video is self-hosted from `assets/videos/jules-intro-web.mp4` and played with a native `<video>` element inside `.video-shell` on `index.html`. To swap in a new cut, replace that file (keep the filename, or update the `<source>` path in `index.html`) — an MP4 encoded for web (H.264/AAC) keeps file size reasonable for a static site.
 
 ### 4. Test locally
 

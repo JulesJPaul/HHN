@@ -1,5 +1,5 @@
 window.HHN_CONFIG = {
-  person: { name: "Jules J Paul", email: "jpaul@oshs.info", license: "SL#3628163" },
+  person: { name: "Jules J Paul", phone: "+17725793242", email: "jpaul@oshs.info", license: "SL#3628163" },
   social: {
     instagram: "https://www.instagram.com/julesjpaulconsultant/",
     tiktok: "https://www.tiktok.com/@julesjpaulconsultant",

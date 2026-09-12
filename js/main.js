@@ -8,6 +8,8 @@ document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
   link.href = `mailto:${config.person.email}${query ? `?${query}` : ""}`;
 });
 
+document.querySelectorAll('[data-contact="phone"]').forEach(link => { link.href = `tel:${config.person.phone}`; });
+
 document.querySelectorAll("[data-booking]").forEach(link => {
   link.href = config.booking?.[link.dataset.booking] || link.href;
 });
