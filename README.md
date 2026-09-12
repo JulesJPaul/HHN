@@ -1,5 +1,5 @@
 # HHN
-# Jules Paul Landing Page — Version 1
+# Jules Paul Housing & Realty Network
 
 A mobile-first landing page for Jules Paul's housing, patient coordination, and shared-living services.
 
@@ -11,31 +11,44 @@ A mobile-first landing page for Jules Paul's housing, patient coordination, and 
 
 ## Project Structure
 
-jules-paul-v1/
+jules-paul/
 ├── index.html
+├── first-world-realty.html
+├── healthcare-housing.html
+├── property.html              # Detail view: property.html?id=vero-001
+├── 404.html
 ├── css/
 │   └── styles.css
 ├── js/
-│   └── main.js
+│   ├── config.js              # Contact, social, booking, and form endpoints
+│   ├── listings.js            # Listing records and IDs
+│   └── main.js                # Shared UI behavior and rendering
 ├── assets/
 │   └── images/
 └── README.md
 
+## Current Features
+
+- Healthcare intake and real-estate inquiry forms
+- Data-driven property cards from `js/listings.js`
+- Search and filters by status, city, and keyword
+- Property details generated from a listing ID
+- Browser-persistent saved properties using local storage
+- Responsive navigation on small screens
+- Static-site `404.html` fallback
+
 ## Before Publishing
 
 ### 1. Replace Jules's contact details
-Open `index.html` and replace:
+Open `js/config.js` and update:
 
-- `+10000000000`
-- `hello@example.com`
+- `person.email`
+- `person.license`
+- `social` URLs
+- `forms` endpoints
+- `booking` URLs
 
-There are three CTA links:
-
-```html
-href="tel:+10000000000"
-href="sms:+10000000000"
-href="mailto:hello@example.com"
-```
+The shared script applies these values to the CTA links at runtime. The default form endpoints use `mailto:` so the static site works immediately; replace them with a backend URL or form service when one is ready. `main.js` serializes form fields as `FormData`, keeping that handoff small.
 
 ### 2. Add Jules's professional photo
 
@@ -141,11 +154,6 @@ Recommended:
 - Leave white space around the QR code
 - Add CTA text such as: **Scan to See How Jules Can Help**
 
-## Version 2 Ideas
-- Contact/intake form
-- Service-specific forms
-- Lead database
-- Email notifications
-- Booking system
-- Analytics
-- Admin dashboard
+## Adding Listings
+
+Add or update records in `js/listings.js`. Every record needs a unique `id`; that ID powers links such as `property.html?id=vero-001` and the detail page lookup.

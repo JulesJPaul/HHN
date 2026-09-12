@@ -17,7 +17,7 @@
       <img src="assets/images/hhn-icon.png" alt="" class="brand-icon">
       <span>Jules J Paul</span>
     </a>
-    <nav class="main-nav" aria-label="Primary navigation">
+    <nav id="primary-navigation" class="main-nav" aria-label="Primary navigation">
       <a href="healthcare-housing.html">Healthcare Housing Resources</a>
       <a href="first-world-realty.html">Realty Services</a>
       <a href="#schedule">Schedule</a>
@@ -25,6 +25,7 @@
       <a href="#about">About</a>
       <a href="#contact" class="nav-cta">Connect</a>
     </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
   </div>
 </header>
 
@@ -95,28 +96,28 @@
           <span class="service-number">01</span>
           <h3>Real Estate & Housing</h3>
           <p>Helping Florida clients navigate buying, selling, renting, and locating housing options through Jules Paul's real estate services with First World Realty Group.</p>
-          <a href="#contact" data-interest="Real Estate & Housing">I need housing help →</a>
+          <a href="first-world-realty.html#inquiry-form">I need housing help →</a>
         </article>
 
         <article class="service-card">
           <span class="service-number">02</span>
           <h3>Community Transition Support</h3>
           <p>Through OSHS LLC — One Stop Health Shop, Jules assists clients transitioning from facility-based settings as they re-enter the community and work toward stable, self-sufficient living.</p>
-          <a href="#contact" data-interest="Community Transition Support">I need transition support →</a>
+          <a href="healthcare-housing.html#intake-form" data-interest="Community transition support">I need transition support →</a>
         </article>
 
         <article class="service-card">
           <span class="service-number">03</span>
           <h3>Community Resource Coordination</h3>
           <p>Helping people already living in the community connect with supportive resources such as housing, transportation, medical-service access, financial resources, and other services that can help them remain independent.</p>
-          <a href="#contact" data-interest="Community Resource Coordination">I need support services →</a>
+          <a href="healthcare-housing.html#intake-form" data-interest="Resource coordination">I need support services →</a>
         </article>
 
         <article class="service-card">
           <span class="service-number">04</span>
           <h3>Shared Living Consulting</h3>
           <p>Helping individuals explore how to prepare and organize residential properties for shared-living arrangements and additional housing opportunities.</p>
-          <a href="#contact" data-interest="Shared Living Consulting">I want to explore shared living →</a>
+          <a href="healthcare-housing.html#intake-form" data-interest="Shared living">I want to explore shared living →</a>
         </article>
       </div>
     </div>
@@ -146,9 +147,9 @@
       <p class="eyebrow">Schedule an appointment</p>
       <h2>Choose the conversation you need.</h2>
       <div class="schedule-grid">
-        <article class="schedule-card"><h3>Property Showings</h3><p>Book time to view available properties with Jules.</p><a class="btn btn-gold" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ06YLKyHNwM4kEP_5tXlsIIAmXHtMVQERo4pFmAXdy3m-fNptD6099srW1Okxk1CkXVSs_lheTU" target="_blank" rel="noopener">Book a showing</a></article>
-        <article class="schedule-card"><h3>Care Coordination Visits</h3><p>Schedule a conversation about transition support and community resources.</p><a class="btn btn-gold" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3VG_fBPqA5aj7VD98pP9B0zXm99i64B7PK6r9gy17ApIaKpTQjFJdSU5i2KHf5lEtZd4TxXIAj" target="_blank" rel="noopener">Book a visit</a></article>
-        <article class="schedule-card"><h3>Virtual Consultations</h3><p>Meet virtually to discuss housing, realty, or shared-living goals.</p><a class="btn btn-gold" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1NxxxSABT0Q_wG1dr0eOp_mpKfw2qHm1c8x69pM5GWrLA0C8cbfXSila-eVybyByDEBg5JnciA" target="_blank" rel="noopener">Book online</a></article>
+        <article class="schedule-card"><h3>Property Showings</h3><p>Book time to view available properties with Jules.</p><a class="btn btn-gold" data-booking="showings" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ06YLKyHNwM4kEP_5tXlsIIAmXHtMVQERo4pFmAXdy3m-fNptD6099srW1Okxk1CkXVSs_lheTU" target="_blank" rel="noopener">Book a showing</a></article>
+        <article class="schedule-card"><h3>Care Coordination Visits</h3><p>Schedule a conversation about transition support and community resources.</p><a class="btn btn-gold" data-booking="care" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3VG_fBPqA5aj7VD98pP9B0zXm99i64B7PK6r9gy17ApIaKpTQjFJdSU5i2KHf5lEtZd4TxXIAj" target="_blank" rel="noopener">Book a visit</a></article>
+        <article class="schedule-card"><h3>Virtual Consultations</h3><p>Meet virtually to discuss housing, realty, or shared-living goals.</p><a class="btn btn-gold" data-booking="virtual" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1NxxxSABT0Q_wG1dr0eOp_mpKfw2qHm1c8x69pM5GWrLA0C8cbfXSila-eVybyByDEBg5JnciA" target="_blank" rel="noopener">Book online</a></article>
       </div>
     </div>
   </section>
@@ -159,8 +160,7 @@
       <h2>What kind of support are you looking for?</h2>
       <p class="section-intro">Reach out about real estate, community transition support, community resource coordination, or shared living. Jules can help identify the right next step.</p>
       <div class="contact-actions">
-        <a class="btn btn-gold" href="tel:+17725793242">Call</a>
-        <a class="btn btn-outline-light" href="sms:+17725793242">Text</a>
+        <a class="btn btn-gold" data-booking="quickCall" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30eo42YzqcF5Z-HE5Sg-LqLbYv-_t0BTN31T0LgCqj-cjpbyo2Wf-E0S9l_gHo9Is50fG_rvIu">Book a Call</a>
         <a class="btn btn-outline-light" href="mailto:jpaul@oshs.info">Email</a>
       </div>
       <div class="socials">
@@ -173,7 +173,7 @@
           <img src="https://cdn.simpleicons.org/tiktok/FFFFFF" alt="">
           <span class="visually-hidden">TikTok</span>
         </a>
-        <a class="social-logo-link" href="https://www.facebook.com/share/1Ye7mha9NW/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook: Jules J Paul" title="Facebook: Jules J Paul">
+        <a class="social-logo-link" href="https://www.facebook.com/share/g/1axv4QEs37/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook: Jules J Paul" title="Facebook: Jules J Paul">
           <img src="https://cdn.simpleicons.org/facebook/FFFFFF" alt="">
           <span class="visually-hidden">Facebook</span>
         </a>
@@ -191,6 +191,6 @@
     <p>© <span id="year"></span> Jules J Paul. All rights reserved.</p>
   </div>
 </footer>
-<script src="js/main.js"></script>
+<script src="js/config.js"></script><script src="js/listings.js"></script><script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,5 @@
+window.HHN_LISTINGS = [
+  { id: "vero-001", status: "Available", city: "Vero Beach", type: "Single-family home", price: "$389,000", beds: 3, baths: 2, image: "assets/images/hhn-brand-reference.png", address: "Vero Beach, Florida", description: "A comfortable Florida home with room to settle in, close to everyday services and community connections." },
+  { id: "fort-pierce-002", status: "Coming soon", city: "Fort Pierce", type: "Condominium", price: "$239,000", beds: 2, baths: 2, image: "assets/images/first-world-realty.png", address: "Fort Pierce, Florida", description: "A low-maintenance coastal option for buyers looking for a practical next chapter near local amenities." },
+  { id: "sebastian-003", status: "Available", city: "Sebastian", type: "Rental home", price: "$2,150 / month", beds: 3, baths: 2, image: "assets/images/jules-headshot.jpg", address: "Sebastian, Florida", description: "A rental opportunity with flexible space for a household preparing for a stable move." }
+];
