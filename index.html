@@ -72,15 +72,18 @@
   </section>
 
   <section id="video" class="section video-section">
-    <div class="container narrow">
-      <p class="eyebrow">Meet Jules</p>
-      <h2>A single point of connection for housing and community support.</h2>
-      <p class="section-intro">Watch a short introduction from Jules explaining how Healthcare Housing Network, OSHS LLC, real estate services, and shared-living support work together.</p>
+    <div class="container">
+      <div class="video-intro">
+        <p class="eyebrow">Meet Jules</p>
+        <h2>A single point of connection for housing and community support.</h2>
+        <p class="section-intro">Watch a short introduction from Jules explaining how Healthcare Housing Network, OSHS LLC, real estate services, and shared-living support work together.</p>
+      </div>
       <div class="video-shell">
-        <video controls preload="metadata" playsinline>
+        <video id="intro-video" preload="metadata" playsinline aria-label="Introduction video from Jules J Paul">
           <source src="assets/videos/jules-intro-web.mp4" type="video/mp4">
           Your browser doesn't support embedded video. <a href="assets/videos/jules-intro-web.mp4">Download the video</a> instead.
         </video>
+        <button class="video-play-toggle" type="button" aria-label="Play introduction video"><span aria-hidden="true">▶</span></button>
       </div>
     </div>
   </section>

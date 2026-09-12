@@ -14,6 +14,17 @@ document.querySelectorAll("[data-booking]").forEach(link => {
   link.href = config.booking?.[link.dataset.booking] || link.href;
 });
 
+const introVideo = document.querySelector("#intro-video");
+const videoPlayToggle = document.querySelector(".video-play-toggle");
+if (introVideo && videoPlayToggle) {
+  const toggleIntroVideo = () => { introVideo.paused ? introVideo.play() : introVideo.pause(); };
+  videoPlayToggle.addEventListener("click", toggleIntroVideo);
+  introVideo.addEventListener("click", toggleIntroVideo);
+  introVideo.addEventListener("play", () => videoPlayToggle.classList.add("is-hidden"));
+  introVideo.addEventListener("pause", () => videoPlayToggle.classList.remove("is-hidden"));
+  introVideo.addEventListener("ended", () => { introVideo.currentTime = 0; });
+}
+
 const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".main-nav");
 if (menuButton && navigation) {
